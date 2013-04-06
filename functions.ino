@@ -171,17 +171,17 @@ void custom(){
   b = 0;
   while(noChange) {
     if(digitalRead(rButtonPin) == HIGH){
-      r+2;
+      r = r+2;
       delay(10);
     }
 
     if(digitalRead(gButtonPin) == HIGH){
-      g+2;
+      g = g+2;
       delay(10);
     }
 
     if(digitalRead(bButtonPin) == HIGH){
-      b+2;
+      b = b+2;
       delay(10);
     }
     //set colors
@@ -198,7 +198,7 @@ void custom(){
     }
 
     setLedColor(r,g,b);
-    /*
+    
     Serial.print("r = ");
     Serial.print(r);
     Serial.print("\t");
@@ -207,13 +207,14 @@ void custom(){
     Serial.print("\t");
     Serial.print("b = ");
     Serial.println(b);
-    */
+    
     delay(10);
   }
 
   noChange = true;
 }
 
+// not used anymore
 void nightLight(){
   while(noChange) {
     photoVal = analogRead(photoPin);
