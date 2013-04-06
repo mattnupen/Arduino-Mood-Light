@@ -60,7 +60,7 @@ int lastButtonState = LOW;   // the previous reading from the input pin
 
 volatile long lastDebounceTime = 0;   // the last time the interrupt was triggered
 volatile int reading;
-#define debounceDelay 50    // the debounce time in ms; decrease if quick button presses are ignored, increase
+#define debounceDelay 100    // the debounce time in ms; decrease if quick button presses are ignored, increase
                              //if you get noise (multipule button clicks detected by the code when you only pressed it once)
 #define buttonPin 0 //digital pin 3, interrupt 0
 
